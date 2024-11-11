@@ -2,7 +2,7 @@ import subprocess
 import time 
 import datetime as dt
 # Délai en secondes (30 minutes).
-INTERVAL = 30*60
+INTERVAL = 20
 def Git_Push():
     try:
         # Ajoute tous les changements.
