@@ -2,7 +2,7 @@ import subprocess
 import time 
 import datetime as dt
 # Délai en secondes (30 minutes).
-INTERVAL = 60
+INTERVAL = 10
 def Git_Push():
     try:
         # Ajoute tous les changements.
@@ -10,7 +10,7 @@ def Git_Push():
 
         # Commit avec un message de automatique.
         current_date_and_time = dt.datetime.now()
-        commit_message = "Sauvegarde automatique Version " + str(current_date_and_time)
+        commit_message = "Sauvegarde automatique " + str(current_date_and_time)
         subprocess.run(["git", "commit", "-m", commit_message], check=True)
 
         # Pousse vers le dépot github.
